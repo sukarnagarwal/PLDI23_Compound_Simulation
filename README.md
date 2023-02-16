@@ -7,6 +7,9 @@ Conatain the gem5 source code as well as step to build the gem5 and build necces
 
 The neccessary ubuntu version to run the gem-5 is >= 20.04.
 
+
+Untar the gem5_artifact and rename the folder to gem5
+
 Install all the neccessary libraries for the gem-5. 
 
 To create docker (from util/dockerfiles/gcn-gpu inside the gem5 folder) run the following command: sudo docker build -t gcn-gpu2 .
