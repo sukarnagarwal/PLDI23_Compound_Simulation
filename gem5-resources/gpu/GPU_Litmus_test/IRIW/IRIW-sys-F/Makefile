@@ -14,7 +14,7 @@ $(BIN_DIR)/IRIW_RelAcq_WO_Atomic_Fence: IRIW_RelAcq_WO_Atomic_Fence.cpp $(BIN_DI
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-clean:s
+clean:
 	rm -rf $(BIN_DIR)
 
 .PHONY: IRIW_RelAcq_WO_Atomic_Fence clean
