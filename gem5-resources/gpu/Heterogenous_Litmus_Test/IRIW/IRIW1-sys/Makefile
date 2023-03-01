@@ -15,7 +15,7 @@ $(BIN_DIR)/IRIW_Ver1_Relax : IRIW_Ver1_Relax.cpp $(BIN_DIR)
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-clean:s
+clean:
 	rm -rf $(BIN_DIR)
 
 .PHONY: IRIW_Ver1_Relax  clean
