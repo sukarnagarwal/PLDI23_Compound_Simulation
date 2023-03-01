@@ -15,7 +15,7 @@ $(BIN_DIR)/IRIW_Ver2_Rel_Acq_GPU_WO_Atomic : IRIW_Ver2_Rel_Acq_GPU_WO_Atomic.cpp
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-clean:s
+clean:
 	rm -rf $(BIN_DIR)
 
 .PHONY: IRIW_Ver2_Rel_Acq_GPU_WO_Atomic  clean
