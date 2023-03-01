@@ -7,10 +7,10 @@ HIPCC=$(HIP_PATH)/bin/hipcc
 
 BIN_DIR?= ./bin
 
-SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst : $(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst 
+SB_Rel_Acq_GPU_WO_Atomic : $(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic 
 
-$(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst : SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst.cpp $(BIN_DIR)
-	$(HIPCC) --amdgpu-target=gfx801,gfx803,gfx900 $(CXXFLAGS) SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst.cpp -o $(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst
+$(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic : SB_Rel_Acq_GPU_WO_Atomic.cpp $(BIN_DIR)
+	$(HIPCC) --amdgpu-target=gfx801,gfx803,gfx900 $(CXXFLAGS) SB_Rel_Acq_GPU_WO_Atomic.cpp -o $(BIN_DIR)/SB_Rel_Acq_GPU_WO_Atomic
 	
 	
 $(BIN_DIR):
@@ -19,4 +19,4 @@ $(BIN_DIR):
 clean:
 	rm -rf $(BIN_DIR)
 
-.PHONY: SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst  clean
+.PHONY: SB_Rel_Acq_GPU_WO_Atomic  clean
