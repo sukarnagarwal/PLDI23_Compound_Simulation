@@ -5,10 +5,10 @@ HIPCC=$(HIP_PATH)/bin/hipcc
 
 BIN_DIR?= ./bin
 
-MP_Ver1_Relax_SWMR_Voilation: $(BIN_DIR)/MP_Ver1_Relax_SWMR_Voilations
+MP_Ver1_Relax_SWMR_voilation: $(BIN_DIR)/MP_Ver1_Relax_SWMR_voilation
 
-$(BIN_DIR)/MP_Ver1_Relax_SWMR_Voilation: MP_Ver1_Relax_SWMR_Voilation.cpp $(BIN_DIR)
-	$(HIPCC) --amdgpu-target=gfx801,gfx803 $(CXXFLAGS) -O1 MP_Ver1_Relax_SWMR_Voilation.cpp -o $(BIN_DIR)/MP_Ver1_Relax_SWMR_Voilation
+$(BIN_DIR)/MP_Ver1_Relax_SWMR_voilation: MP_Ver1_Relax_SWMR_voilation.cpp $(BIN_DIR)
+	$(HIPCC) --amdgpu-target=gfx801,gfx803 $(CXXFLAGS) -O1 MP_Ver1_Relax_SWMR_voilation.cpp -o $(BIN_DIR)/MP_Ver1_Relax_SWMR_voilation
 	
 	
 $(BIN_DIR):
@@ -17,4 +17,4 @@ $(BIN_DIR):
 clean:
 	rm -rf $(BIN_DIR)
 
-.PHONY: MP_Ver1_Relax_SWMR_Voilation clean
+.PHONY: MP_Ver1_Relax_SWMR_voilation clean
