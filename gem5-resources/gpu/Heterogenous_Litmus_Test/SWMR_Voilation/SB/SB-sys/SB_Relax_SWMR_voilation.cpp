@@ -71,7 +71,7 @@ storeb_loada(T* delay,  struct s_var* var, volatile struct r_cpu0* res1)
 #pragma GCC optimize ("O0")
    for (int j = 0; j < (*delay); j++);
       //for (int j = 0; j < (*delay); j++);
-        //  res1->r0 = var->a;		
+          res1->r0 = var->a;		
    for (int j = 0; j < (*delay); j++);
     var->b  = 1; 
        for (int j = 0; j < (*delay); j++);
