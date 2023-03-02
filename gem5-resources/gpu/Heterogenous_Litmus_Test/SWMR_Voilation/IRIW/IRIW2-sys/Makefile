@@ -15,7 +15,7 @@ $(BIN_DIR)/IRIW_Ver2_Relax_SWMR_voilation : IRIW_Ver2_Relax_SWMR_voilation.cpp $
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-clean:s
+clean:
 	rm -rf $(BIN_DIR)
 
 .PHONY: IRIW_Ver2_Relax_SWMR_voilation  clean
