@@ -30,7 +30,6 @@ cd ../../../
 echo "========================================================="
 echo "Building GPU only Litmus Test"
 echo "========================================================="
-#cd gem5-resources/gpu/litmusTest
 cd gem5-resources/gpu/GPU_Litmus_test 
 ./buildall.sh
 cd ../../../
