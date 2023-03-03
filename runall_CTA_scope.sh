@@ -11,7 +11,7 @@ cd ..
 echo "Building Gem-5 for CTA Scope for GPU system"
 sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu scons -sQ -j4 build/GCN3_X86/gem5.opt
 echo "Executing MP-cta-F"
-sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_MP-cta-F_GPU_only_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 3 -c gem5-resources/gpu/litmusTest/MP/MP-cta-F/bin/MP_RelAcq_Wg_Scope
+sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_MP-cta-F_GPU_only_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 3 -c gem5-resources/gpu/GPU_Litmus_Test/MP/MP-cta-F/bin/MP_RelAcq_Wg_Scope
 cd m5out
 grep -inr "L1cache.passTest " stats_MP-cta-F_GPU_only_2048runs | awk '{print $2}' | awk '{ if ($1 != 0 ) print "Pass Test: "$1 }'
 grep -inr "L1cache.failTest " stats_MP-cta-F_GPU_only_2048runs | awk '{print $2}' | awk '{ if ($1 != 0 ) print "Fail Test: "$1 }'
