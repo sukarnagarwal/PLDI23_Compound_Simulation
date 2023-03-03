@@ -27,7 +27,7 @@ do
 					continue
 				fi
 				cd $l
-				echo "Building " $l 
+				echo "Cleaning " $l 
 				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
 				cd ..
 			else
@@ -37,7 +37,7 @@ do
 					continue
 				fi
 				cd $l
-				echo "Building " $l
+				echo "Cleaning " $l
 				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
 				cd ..
 			fi	
