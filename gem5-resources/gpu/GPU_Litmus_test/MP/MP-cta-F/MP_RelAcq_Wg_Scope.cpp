@@ -144,7 +144,7 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         else
         	res_cpu2_gpu2++;
     }
-/*
+
     if (!res_cpu0_gpu1) {
       cout << "Success!" << endl;
         cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << endl;
@@ -166,7 +166,7 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         cout << "Num Invalid test: " << res_cpu0_gpu1 << endl;
         return 2;
     }
-*/    
+   
 }
 
 
