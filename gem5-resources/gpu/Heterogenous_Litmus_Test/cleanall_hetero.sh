@@ -47,3 +47,7 @@ do
 	cd ..		
 done
 
+cd MP/MP1-CTA-F
+echo "Building MP1-cta-F"
+sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
+cd ../../
