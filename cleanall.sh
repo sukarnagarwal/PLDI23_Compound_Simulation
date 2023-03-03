@@ -19,8 +19,7 @@ cd ../../../
 echo "========================================================="
 echo "Cleaning GPU only Litmus Test"
 echo "========================================================="
-cd gem5-resources/gpu/litmusTest
-#cd gem5-resources/gpu/GPU_Litmus_test 
+cd gem5-resources/gpu/GPU_Litmus_test 
 ./cleanall.sh
 cd ../../../
 
