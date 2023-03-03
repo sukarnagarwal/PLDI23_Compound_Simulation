@@ -215,6 +215,18 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, struct r_gpu2* v_
 
         cout << "Pass Test: " << pass << endl;
 	cout << "Failure Test: " << failure << endl;
+	if (failure != 0)
+	{
+		std::cout << "=========================================================================" << std::endl;
+        	std::cout << "	\t GPU-Only IRIW-sys-F Allowed  \t " << std::endl;						
+        	std::cout << "=========================================================================" << std::endl;  
+	}
+	else
+	{
+		std::cout << "=========================================================================" << std::endl;
+        	std::cout << "	\t GPU-Only IRIW-sys-F Disallowed  \t " << std::endl;						
+        	std::cout << "=========================================================================" << std::endl;  
+	}
 
     if ((!res_cpu1_gpu0) && (!rst_cpu1_gpu0)) {
         cout << "Success!" << endl;
