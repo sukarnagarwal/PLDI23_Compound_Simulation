@@ -147,6 +147,9 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         cout << "Count (a:2 and b:2): " << res_cpu2_gpu2 << endl;
         cout << "Num Valid test: " << (t_range - res_cpu0_gpu1) << endl;
         cout << "Num Invalid test: " << res_cpu0_gpu1 << endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t GPU-Only MP-sys-F Disallowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl;
         return 0;
     } else {
         cout << "Fail!" << endl;
@@ -157,8 +160,12 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         cout << "Count (a:2 and b:2): " << res_cpu2_gpu2 << endl;
         cout << "Num Valid test: " << (t_range - res_cpu0_gpu1) << endl;
         cout << "Num Invalid test: " << res_cpu0_gpu1 << endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t GPU-Only MP-sys Allowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl;
         return 2;
     }
+
 
 }
 
