@@ -65,7 +65,7 @@ do
 				echo "statsName: " $statsName
 				genVerFileName
 				echo "fileName: " $fileName
-				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/$i/$l/bin/$fileName -o $threads	
+				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'	
 			else
 				l=$i
 				l+=$k
@@ -77,7 +77,7 @@ do
 				echo "statsName: " $statsName
 				genFileName
 				echo "fileName: " $fileName
-				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/$i/$l/bin/$fileName -o $threads
+				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'
 				
 			fi
 		done

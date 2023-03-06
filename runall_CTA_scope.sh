@@ -64,7 +64,7 @@ cd ../../../
 echo "Building Gem-5 for CTA Scope for heterogeneous"
 sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu scons -sQ -j4 build/GCN3_X86/gem5.opt
 echo "Executing MP1-cta-F"
-sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_MP1-cta-F_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/MP/MP1-CTA-F/bin/MP_Ver1_Rel_Acq_GPU_Scope -o 4
+sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_MP1-cta-F_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/MP/MP1-CTA-F/bin/MP_Ver1_Rel_Acq_GPU_Scope -o 4 | grep 'Disallowed\|Allowed'
 cd gem5
 mv src src_CTA_Hetero
 mv src_original_files src
