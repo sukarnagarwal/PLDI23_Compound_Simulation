@@ -198,6 +198,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu0_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu0_gpu1 << std::endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t Compound MP1-sys Disallowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl; 
         return 0;
     } else {
         std::cout << "Fail!" << std::endl;
@@ -208,6 +211,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu0_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu0_gpu1 << std::endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t Compound MP1-sys Allowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
 
