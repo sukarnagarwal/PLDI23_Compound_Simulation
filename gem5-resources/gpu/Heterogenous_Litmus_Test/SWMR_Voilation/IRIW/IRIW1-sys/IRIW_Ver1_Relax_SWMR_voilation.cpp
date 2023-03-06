@@ -258,7 +258,18 @@ int check_output(unsigned t_range)
     
     std::cout << "Pass Test: " << pass << std::endl;
 	std::cout << "Failure Test: " << failure << std::endl;
-
+if (failure != 0)
+    {
+		std::cout << "=========================================================================" << std::endl;
+        	std::cout << "	\t Compound IRIW1-sys with SWMR voilation Allowed  \t " << std::endl;						
+        	std::cout << "=========================================================================" << std::endl;  
+    }
+    else
+    {
+		std::cout << "=========================================================================" << std::endl;
+        	std::cout << "	\t Compound IRIW1-sys with SWMR voilation Disallowed  \t " << std::endl;						
+        	std::cout << "=========================================================================" << std::endl;  
+    }
     if (!res_cpu1_gpu0 && !rst_cpu0_gpu1) {
         std::cout << "Success!" << std::endl;
         
