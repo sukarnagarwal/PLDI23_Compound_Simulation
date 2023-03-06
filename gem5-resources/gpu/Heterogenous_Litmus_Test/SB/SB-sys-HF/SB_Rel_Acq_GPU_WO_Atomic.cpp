@@ -166,8 +166,7 @@ int check_output(unsigned t_range)
             res_cpu2_gpu2++;
         }
     }
-
-    if (!res_cpu0_gpu0) {
+ if (!res_cpu0_gpu0) {
         std::cout << "Success!" << std::endl;
         std::cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << std::endl;
         std::cout << "Count (a:1 and b:0): " << res_cpu1_gpu0 << std::endl;
@@ -176,6 +175,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu0_gpu0) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu0_gpu0 << std::endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t Compound SB-sys-HF Disallowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl; 
         return 0;
     } else {
         std::cout << "Fail!" << std::endl;
@@ -186,6 +188,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu0_gpu0) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu0_gpu0 << std::endl;
+        std::cout << "=========================================================================" << std::endl;
+        std::cout << "	\t Compound SB-sys-HF Allowed  \t " << std::endl;						
+        std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
 
