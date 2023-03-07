@@ -1,5 +1,5 @@
 #!/bin/bash
-
+NCORES=`nproc`
 
 function genStatsName()
 {
@@ -37,7 +37,7 @@ cd gem5
 mv src src_original_files
 mv src_SWMR_voilation src
 echo "Building Gem-5 for SWMR Voilation"
-scons -sQ -j4 build/GCN3_X86/gem5.opt
+scons -sQ -j$NCORES build/GCN3_X86/gem5.opt
 cd ..
 for i in MP LB SB IRIW
 do
@@ -95,5 +95,5 @@ cd gem5
 mv src src_SWMR_voilation
 mv src_original_files src
 echo "Re-Build Gem-5 with Original Files"
-scons -sQ -j4 build/GCN3_X86/gem5.opt
+scons -sQ -j$NCORES build/GCN3_X86/gem5.opt
 cd ..

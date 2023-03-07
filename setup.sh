@@ -1,5 +1,5 @@
 #!/bin/bash
-
+NCORES=`nproc`
 
 #######################################################################################################
 #			Building GEM-5
@@ -8,7 +8,7 @@ echo "========================================================="
 echo "Building Gem-5 with Original Files"
 echo "========================================================="
 cd gem5
-scons -sQ -j4 build/GCN3_X86/gem5.opt
+scons -sQ -j$NCORES build/GCN3_X86/gem5.opt
 cd ..
 
 
