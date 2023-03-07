@@ -10,4 +10,4 @@ OUTPUT=results.csv
 ./runall_SWMR_Voilation.sh 2>> build.log | tee -a $LOG
 
 echo "Type,Litmus,Result" > $OUTPUT
-sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | tr ' ' ',' >> $OUTPUT
+sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $OUTPUT
