@@ -1,4 +1,4 @@
-## Make File Framed by: Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
+## Make File Framed by: 
 
 
 HIP_PATH?= /opt/rocm-4.0.1/hip

@@ -38,7 +38,7 @@ mv src src_original_files
 mv src_SWMR_voilation src
 cd ..
 echo "Building Gem-5 for SWMR Voilation"
-sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu scons -sQ -j4 build/GCN3_X86/gem5.opt
+scons -sQ -j4 gem5/build/GCN3_X86/gem5.opt
 for i in MP LB SB IRIW
 do
 	threads=0
@@ -71,7 +71,8 @@ do
 				echo "statsName: " $statsName
 				genVerFileName
 				echo "fileName: " $fileName
-				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/SWMR_Voilation/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'
+				gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/SWMR_Voilation/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'
+					echo "================================================================================================================"
 			else
 				l=$i
 				l+=$k
@@ -83,7 +84,8 @@ do
 				echo "statsName: " $statsName
 				genFileName
 				echo "fileName: " $fileName
-				sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/SWMR_Voilation/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'
+				gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n $cpus -c gem5-resources/gpu/Heterogenous_Litmus_Test/SWMR_Voilation/$i/$l/bin/$fileName -o $threads | grep 'Disallowed\|Allowed'
+					echo "================================================================================================================"
 				
 			fi
 		done
@@ -94,5 +96,5 @@ mv src src_SWMR_voilation
 mv src_original_files src
 cd ..
 echo "Re-Build Gem-5 with Original Files"
-sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu scons -sQ -j4 build/GCN3_X86/gem5.opt
+scons -sQ -j4 gem5/build/GCN3_X86/gem5.opt
 

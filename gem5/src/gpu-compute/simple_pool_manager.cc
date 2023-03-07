@@ -86,7 +86,7 @@ SimplePoolManager::allocateRegion(const uint32_t size,
     uint32_t startIdx = _nxtFreeIdx;
     _nxtFreeIdx += actualSize;
     _regionSize = actualSize;
-    assert(_nxtFreeIdx < poolSize());
+    assert(_nxtFreeIdx <= poolSize());
     *reservedPoolSize = actualSize;
     ++_reservedGroups;
 

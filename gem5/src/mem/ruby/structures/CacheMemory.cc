@@ -581,7 +581,7 @@ CacheMemoryStats::CacheMemoryStats(statistics::Group *parent)
       ADD_STAT(m_prefetch_misses, "Number of cache prefetch misses"),
       ADD_STAT(m_prefetch_accesses, "Number of cache prefetch accesses",
                m_prefetch_hits + m_prefetch_misses),
-      ADD_STAT(m_accessModeType, ""),
+      ADD_STAT(m_accessModeType, "")
 {
     numDataArrayReads
         .flags(statistics::nozero);

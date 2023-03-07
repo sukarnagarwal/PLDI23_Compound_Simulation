@@ -20,8 +20,7 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
+
     
     
 */
@@ -169,7 +168,6 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         std::cout << "=========================================================================" << std::endl;  
         return 2;
     }
-
 
 }
 

@@ -28,7 +28,7 @@ do
 				fi
 				cd $l
 				echo "Cleaning " $l 
-				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
+				make clean
 				cd ..
 			else
 				l=$i
@@ -38,7 +38,7 @@ do
 				fi
 				cd $l
 				echo "Cleaning " $l
-				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
+				make clean
 				cd ..
 			fi	
 		done	

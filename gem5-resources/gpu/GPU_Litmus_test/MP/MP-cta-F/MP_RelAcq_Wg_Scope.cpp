@@ -20,9 +20,7 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
-    
+
     
 */
 
@@ -166,7 +164,7 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         cout << "Num Invalid test: " << res_cpu0_gpu1 << endl;
         return 2;
     }
-   
+ 
 }
 
 

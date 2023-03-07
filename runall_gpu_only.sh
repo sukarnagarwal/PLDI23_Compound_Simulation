@@ -34,7 +34,8 @@ do
 		echo "statsName: " $statsName
 		genFileName
 		echo "fileName: " $fileName
-	sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 3 -c gem5-resources/gpu/litmusTest/$i/$k/bin/$fileName | grep 'Disallowed\|Allowed'
+	gem5/build/GCN3_X86/gem5.opt --stats-file=$statsName gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 3 -c gem5-resources/gpu/GPU_Litmus_test/$i/$k/bin/$fileName | grep 'Disallowed\|Allowed'
+		echo "================================================================================================================"
 	done
 done
 

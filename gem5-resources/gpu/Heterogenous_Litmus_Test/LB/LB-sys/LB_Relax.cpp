@@ -19,8 +19,7 @@
     
     Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
+   
     
 */
 
@@ -172,9 +171,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu1_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu1_gpu1 << std::endl;
-	std::cout << "=========================================================================" << std::endl;
+        std::cout << "=========================================================================" << std::endl;
         std::cout << "	\t Compound LB-sys Disallowed  \t " << std::endl;						
-        std::cout << "=========================================================================" << std::endl;     
+        std::cout << "=========================================================================" << std::endl; 
         return 0;
     } else {
         std::cout << "Fail!" << std::endl;
@@ -185,9 +184,9 @@ int check_output(unsigned t_range)
         std::cout << "Count (r0:2 and r1:2): " << res_cpu2_gpu2 << std::endl;
         std::cout << "Num Valid test: " << (t_range - res_cpu1_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu1_gpu1 << std::endl;
-	std::cout << "=========================================================================" << std::endl;
+        std::cout << "=========================================================================" << std::endl;
         std::cout << "	\t Compound LB-sys Allowed  \t " << std::endl;						
-        std::cout << "=========================================================================" << std::endl;     
+        std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
 

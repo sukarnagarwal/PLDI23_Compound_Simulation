@@ -1,4 +1,4 @@
-## Make File Framed by: Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
+## Make File Framed by: 
 
 HIP_PATH?= /opt/rocm-4.0.1/hip
 HIPCC=$(HIP_PATH)/bin/hipcc
@@ -17,5 +17,4 @@ clean:
 	rm -rf $(BIN_DIR)
 
 .PHONY: SB_RelAcq_WO_Atomic_Fence clean
-
 

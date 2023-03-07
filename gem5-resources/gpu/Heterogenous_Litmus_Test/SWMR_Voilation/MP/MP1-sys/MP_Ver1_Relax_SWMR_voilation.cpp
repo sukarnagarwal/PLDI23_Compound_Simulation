@@ -19,8 +19,7 @@
     
     Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk) 
+ 
 */
 
 
@@ -103,6 +102,7 @@ setab(T* delay, struct s_var* var)
 #pragma GCC optimize ("O0")
 	     //var->b = 1;	
              var->b = 0;
+             //var->a = 0;
     for (int j = 0; j < (*delay); j++);
     var->a = 1;  
     var->b = 1;
@@ -191,7 +191,6 @@ int check_output(unsigned t_range)
         }
     }
 
-   
     if (!res_cpu0_gpu1) {
         std::cout << "Success!" << std::endl;
         std::cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << std::endl;

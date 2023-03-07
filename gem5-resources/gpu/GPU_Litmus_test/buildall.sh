@@ -24,7 +24,7 @@ do
 		fi
 		cd $k
 		echo "Building " $k 
-		sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make
+		make
 		cd ..
 	done
 	cd ..

@@ -19,8 +19,6 @@
     
     Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
     
 */
 
@@ -263,6 +261,7 @@ if (failure != 0)
         	std::cout << "	\t Compound IRIW2-sys-F with SWMR voilation Disallowed  \t " << std::endl;						
         	std::cout << "=========================================================================" << std::endl;  
     }
+
     if (!res_cpu1_gpu0 && !rst_cpu0_gpu1) {
         std::cout << "Success!" << std::endl;
         std::cout << "Count (a:0 and b:0): " << rst_cpu0_gpu0 << std::endl;

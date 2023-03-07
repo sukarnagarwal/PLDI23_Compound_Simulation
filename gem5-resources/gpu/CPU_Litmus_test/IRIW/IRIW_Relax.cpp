@@ -20,8 +20,7 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
+
     
     
 */
@@ -218,7 +217,7 @@ int check_output(unsigned t_range)
     
      	std::cout << "Pass Test: " << pass << std::endl;
 	std::cout << "Failure Test: " << failure << std::endl;
-        if (failure != 0)
+	if (failure != 0)
 	{
 		std::cout << "=========================================================================" << std::endl;
         	std::cout << "	\t CPU-Only IRIW-sys Allowed  \t " << std::endl;						
@@ -230,6 +229,7 @@ int check_output(unsigned t_range)
         	std::cout << "	\t CPU-Only IRIW-sys Disallowed  \t " << std::endl;						
         	std::cout << "=========================================================================" << std::endl;  
 	}
+
 
     if ((!res_cpu1_gpu0) && (!rst_cpu0_gpu1)) {
         std::cout << "Success!" << std::endl;

@@ -20,8 +20,7 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
+  
     
     
 */
@@ -189,6 +188,7 @@ int check_output(unsigned t_range)
         std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
+
 }
 
 

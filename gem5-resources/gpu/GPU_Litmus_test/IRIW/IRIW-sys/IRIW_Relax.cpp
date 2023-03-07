@@ -20,8 +20,6 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
     
     
 */
@@ -214,7 +212,7 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, struct r_gpu2* v_
     }
         cout << "Pass Test: " << pass << endl;
 	cout << "Failure Test: " << failure << endl;
-    	if (failure != 0)
+	if (failure != 0)
 	{
 		std::cout << "=========================================================================" << std::endl;
         	std::cout << "	\t GPU-Only IRIW-sys Allowed  \t " << std::endl;						
@@ -226,6 +224,8 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, struct r_gpu2* v_
         	std::cout << "	\t GPU-Only IRIW-sys Disallowed  \t " << std::endl;						
         	std::cout << "=========================================================================" << std::endl;  
 	}
+
+    
     if ((!res_cpu1_gpu0) && (!rst_cpu0_gpu1)) {
         cout << "Success!" << endl;
         cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << endl;

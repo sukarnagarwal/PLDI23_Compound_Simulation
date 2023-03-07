@@ -28,7 +28,7 @@ do
 				fi
 				cd $l
 				echo "Building " $l 
-				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make
+				make
 				cd ..
 			else
 				l=$i
@@ -38,7 +38,7 @@ do
 				fi
 				cd $l
 				echo "Building " $l
-				sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make
+				make
 				cd ..
 			fi	
 		done	

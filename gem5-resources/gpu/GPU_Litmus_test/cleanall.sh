@@ -18,7 +18,7 @@ do
 		fi
 		cd $k
 		echo "Cleaning "$k
-		sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make clean
+		make clean
 		cd ..
 	done
 	cd ..

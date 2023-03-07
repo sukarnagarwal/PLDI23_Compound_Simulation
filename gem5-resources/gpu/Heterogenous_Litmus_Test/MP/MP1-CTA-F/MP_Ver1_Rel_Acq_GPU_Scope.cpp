@@ -18,8 +18,7 @@
     
     Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)  
+ 
 */
 
 // Runs on 16KB
@@ -166,7 +165,7 @@ int check_output(unsigned t_range)
         }
     }
 
-   if (!res_cpu0_gpu1) {
+    if (!res_cpu0_gpu1) {
         std::cout << "Success!" << std::endl;
         std::cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << std::endl;
         std::cout << "Count (a:1 and b:0): " << res_cpu1_gpu0 << std::endl;
@@ -193,6 +192,7 @@ int check_output(unsigned t_range)
         std::cout << "=========================================================================" << std::endl;
         return 2;
     }
+
 }
 
 

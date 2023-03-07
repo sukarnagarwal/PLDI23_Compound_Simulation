@@ -19,12 +19,9 @@
     
     Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
+
     
 */
-
-
 
 
 #include <assert.h>
@@ -166,7 +163,7 @@ int check_output(unsigned t_range)
         }
     }
 
-     if (!res_cpu0_gpu0) {
+    if (!res_cpu0_gpu0) {
         std::cout << "Success!" << std::endl;
         std::cout << "Count (a:0 and b:0): " << res_cpu0_gpu0 << std::endl;
         std::cout << "Count (a:1 and b:0): " << res_cpu1_gpu0 << std::endl;
@@ -193,6 +190,7 @@ int check_output(unsigned t_range)
         std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
+
 }
 
 

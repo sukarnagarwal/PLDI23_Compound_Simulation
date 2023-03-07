@@ -20,9 +20,7 @@
     
 Litmus Test Developed by 
 
-Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
-Nicolai Oswald (Email: nicolai.oswald@ed.ac.uk)    
-    
+
     
 */
 
@@ -73,6 +71,7 @@ setab(T* delay, struct s_var* var)
      var->a = 0;
     for (unsigned long int j = 0; j < (*delay); j++);
     var->a = 1;
+    //var->b = 1;
     __atomic_store_n(&var->b, 1, __ATOMIC_RELEASE);
 #pragma GCC pop_options 
 
@@ -89,6 +88,7 @@ loadba(T* delay, struct s_var* var, struct r_gpu0* res1, struct r_gpu1* res2)
     res2->r0 = var->a;
     for (int j = 0; j < (*delay); j++);
     res1->r0 = __atomic_load_n(&var->b, __ATOMIC_ACQUIRE);
+    //res1->r0 = var->b;
     res2->r0 = var->a;
 #pragma GCC pop_options 
 
@@ -165,7 +165,6 @@ int check_output(struct r_gpu0* v_cpu0, struct r_gpu1* v_gpu0, unsigned t_range)
         std::cout << "=========================================================================" << std::endl;
         return 2;
     }
-
 
 }
 

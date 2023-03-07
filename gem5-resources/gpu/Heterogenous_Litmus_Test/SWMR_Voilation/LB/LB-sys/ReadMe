@@ -1,7 +1,7 @@
 /*
 
 
-Read Me File Framed by: Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
+Read Me File Framed by: 
 
 
 */
@@ -27,7 +27,7 @@ sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/buil
 
 // Results Obtained from the terminal window
 
-// LB (known as LB-sys in the paper with No SWMR)
+// LB (known as SB-sys-F in the paper with No SWMR)
 
 Validating...Success!
 Count (a:0 and b:0): 60
