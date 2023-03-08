@@ -252,13 +252,13 @@ int check_output(unsigned t_range)
 if (failure != 0)
     {
 		std::cout << "=========================================================================" << std::endl;
-        	std::cout << "	\t Compound IRIW2-sys with SWMR voilation Allowed  \t " << std::endl;						
+        	std::cout << "	\t Compound_no_SWMR IRIW2-sys Allowed  \t " << std::endl;						
         	std::cout << "=========================================================================" << std::endl;  
     }
     else
     {
 		std::cout << "=========================================================================" << std::endl;
-        	std::cout << "	\t Compound IRIW2-sys with SWMR voilation Disallowed  \t " << std::endl;						
+        	std::cout << "	\t Compound_no_SWMR IRIW2-sys Disallowed  \t " << std::endl;						
         	std::cout << "=========================================================================" << std::endl;  
     }
 

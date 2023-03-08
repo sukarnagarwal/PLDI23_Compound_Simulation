@@ -145,7 +145,7 @@ int check_output(unsigned t_range)
         std::cout << "Num Valid test: " << (t_range - res_cpu1_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu1_gpu1 << std::endl;
         std::cout << "=========================================================================" << std::endl;
-        std::cout << "	\t Compound LB-sys with SWMR voilation Disallowed  \t " << std::endl;						
+        std::cout << "	\t Compound_no_SWMR LB-sys Disallowed  \t " << std::endl;						
         std::cout << "=========================================================================" << std::endl; 
         return 0;
     } else {
@@ -158,7 +158,7 @@ int check_output(unsigned t_range)
         std::cout << "Num Valid test: " << (t_range - res_cpu1_gpu1) << std::endl;
         std::cout << "Num Invalid test: " << res_cpu1_gpu1 << std::endl;
         std::cout << "=========================================================================" << std::endl;
-        std::cout << "	\t Compound LB-sys with SWMR voilation Allowed  \t " << std::endl;						
+        std::cout << "	\t Compound_no_SWMR LB-sys Allowed  \t " << std::endl;						
         std::cout << "=========================================================================" << std::endl; 
         return 2;
     }
