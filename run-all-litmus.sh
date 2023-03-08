@@ -12,8 +12,7 @@ TMP=tmp.csv
 ./runall_SWMR_Voilation.sh 2>> build.log | tee -a $LOG
 
 echo "Type,Litmus,Result" > $TMP
-sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $TMP
-
+sed -n -e '/llowed/p' $LOG | sed 's/Compound \(.*\) with SWMR voilation/Compound_no_SWMR \1/g' | sed 's/^[[:space:]]*//' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $TMP
 touch $OUTPUT
 for i in `cat $TMP`; do
     #Assumes $EXPECTED has exactly one entry matching
