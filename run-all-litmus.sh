@@ -12,7 +12,7 @@ TMP=tmp.csv
 ./runall_SWMR_Voilation.sh 2>> build.log | tee -a $LOG
 
 echo "Type,Litmus,Result" > $TMP
-sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed 's/ with SWMR voilation/_no_SWMR/' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $TMP
+sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $TMP
 
 touch $OUTPUT
 for i in `cat $TMP`; do
