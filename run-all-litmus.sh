@@ -2,6 +2,8 @@
 
 LOG=litmus.log
 OUTPUT=results.csv
+EXPECTED=expected.csv
+TMP=tmp.csv
 
 ./runall_cpu_only.sh 2>> build.log | tee $LOG
 ./runall_gpu_only.sh 2>> build.log | tee -a $LOG
@@ -9,5 +11,24 @@ OUTPUT=results.csv
 ./runall_Hetero_only.sh 2>> build.log | tee -a $LOG
 ./runall_SWMR_Voilation.sh 2>> build.log | tee -a $LOG
 
-echo "Type,Litmus,Result" > $OUTPUT
-sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $OUTPUT
+echo "Type,Litmus,Result" > $TMP
+sed -n -e '/llowed/p' $LOG | sed 's/^[[:space:]]*//' | sed 's/ with SWMR voilation/_no_SWMR/' | sed -E 's/[[:space:]]*$//' | tr ' ' ',' >> $TMP
+
+touch $OUTPUT
+for i in `cat $TMP`; do
+    #Assumes $EXPECTED has exactly one entry matching
+    LINE_DONE=0
+    for j in `cat $EXPECTED`; do
+        fields_i=`echo $i | cut -d ',' -f 1,2`
+        fields_j=`echo $j | cut -d ',' -f 1,2`
+        if [ $fields_i == $fields_j ]; then
+            echo -n $i, >> $OUTPUT
+            echo $j | cut -d ',' -f 3 >> $OUTPUT
+            LINE_DONE=1
+        fi
+    done
+    if [ $LINE_DONE == 0 ]; then
+        echo -n $i >> $OUTPUT
+    fi
+done
+rm $TMP

@@ -20,11 +20,11 @@ passTest=$(grep -inr "L1cache.passTest " stats_MP-cta-F_GPU_only_2048runs | awk 
 failTest=$(grep -inr "L1cache.failTest " stats_MP-cta-F_GPU_only_2048runs | awk '{print $2}' | awk '{ if ($1 != 0 ) print $1 }')
 if [[ $failTest -gt 0 ]]; then
 	echo "====================================================================="
-	echo "		GPU only MP-cta-F Allowed				     "
+	echo "		GPU-only MP-cta-F Allowed				     "
 	echo "====================================================================="
 else 
 	echo "====================================================================="
-	echo "		GPU only MP-cta-F Disallowed				     "
+	echo "		GPU-only MP-cta-F Disallowed				     "
 	echo "====================================================================="
 fi
 cd ..
