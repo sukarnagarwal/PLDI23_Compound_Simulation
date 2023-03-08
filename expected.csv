@@ -1,4 +1,4 @@
-Type,Litmus,Result
+Type,Litmus,Expected
 CPU-Only,MP-sys,Disallowed
 CPU-Only,LB-sys,Disallowed
 CPU-Only,SB-sys,Allowed

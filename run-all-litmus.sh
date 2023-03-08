@@ -28,7 +28,7 @@ for i in `cat $TMP`; do
         fi
     done
     if [ $LINE_DONE == 0 ]; then
-        echo -n $i >> $OUTPUT
+        echo $i >> $OUTPUT
     fi
 done
 rm $TMP
