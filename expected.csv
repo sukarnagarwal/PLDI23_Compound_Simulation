@@ -5,12 +5,13 @@ CPU-Only,SB-sys,Allowed
 CPU-Only,IRIW-sys,Disallowed
 GPU-Only,MP-sys,Allowed
 GPU-Only,MP-sys-F,Disallowed
-GPU-Only,MP-cta-F,Allowed
 GPU-Only,LB-sys,Disallowed
 GPU-Only,SB-sys,Allowed
 GPU-Only,SB-sys-F,Disallowed
 GPU-Only,IRIW-sys,Allowed
 GPU-Only,IRIW-sys-F,Disallowed
+GPU-Only,MP-cta-F,Allowed
+Compound,MP1-cta-F,Disallowed
 Compound,MP1-sys,Allowed
 Compound,MP1-sys-F,Disallowed
 Compound,MP2-sys,Allowed
@@ -23,7 +24,11 @@ Compound,IRIW2-sys,Allowed
 Compound,IRIW2-sys-F,Disallowed
 Compound_no_SWMR,MP1-sys,Allowed
 Compound_no_SWMR,MP1-sys-F,Disallowed
-Compound_no_SWMR,MP1-cta-F,Allowed
+Compound_no_SWMR,MP2-sys,Allowed
+Compound_no_SWMR,MP2-sys-F,Disallowed
+Compound_no_SWMR,LB-sys,Disallowed
 Compound_no_SWMR,SB-sys,Allowed
+Compound_no_SWMR,SB-sys-F,Disallowed
 Compound_no_SWMR,IRIW1-sys,Disallowed
+Compound_no_SWMR,IRIW2-sys,Allowed
 Compound_no_SWMR,IRIW2-sys-F,Disallowed
