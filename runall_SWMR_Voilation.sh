@@ -1,5 +1,5 @@
 #!/bin/bash
-NCORES=`nproc`
+
 
 function genStatsName()
 {
@@ -36,9 +36,9 @@ function genVerFileName()
 cd gem5
 mv src src_original_files
 mv src_SWMR_voilation src
-echo "Building Gem-5 for SWMR Voilation"
-scons -sQ -j$NCORES build/GCN3_X86/gem5.opt
 cd ..
+echo "Building Gem-5 for SWMR Voilation"
+scons -sQ -j4 gem5/build/GCN3_X86/gem5.opt
 for i in MP LB SB IRIW
 do
 	threads=0
@@ -94,6 +94,7 @@ done
 cd gem5
 mv src src_SWMR_voilation
 mv src_original_files src
-echo "Re-Build Gem-5 with Original Files"
-scons -sQ -j$NCORES build/GCN3_X86/gem5.opt
 cd ..
+echo "Re-Build Gem-5 with Original Files"
+scons -sQ -j4 gem5/build/GCN3_X86/gem5.opt
+
