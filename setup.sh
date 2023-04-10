@@ -7,7 +7,7 @@
 echo "========================================================="
 echo "Building Gem-5 with Original Files"
 echo "========================================================="
-sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu scons -sQ -j4 build/GCN3_X86/gem5.opt
+sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu2 scons -sQ -j4 build/GCN3_X86/gem5.opt
 
 
 
