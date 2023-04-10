@@ -1,3 +1,4 @@
+# Script file framed by Sukarn Agarwal (sagarwa2@ed.ac.uk)
 #!/bin/bash
 
 
