@@ -12,7 +12,7 @@ Read Me File Framed by: Sukarn Agarwal (Email: sagarwa2@ed.ac.uk)
 sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make
 
 // Gem5 command to run the SB Fence Hetero litmus test
-sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_SB_Fence_Hetro_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/SB/bin/SB_Rel_Acq_GPU_WO_Atomic_CPU_Seq_Cst -o 4
+sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_SB_Fence_Hetro_2048runs gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/SB/SB-sys-F/bin/SB_Rel_Acq_GPU_WO_Atomic -o 4
 
 
 // Results Obtained from the terminal window
