@@ -32,4 +32,3 @@ for i in `cat $TMP`; do
     fi
 done
 rm $TMP
-Footer
