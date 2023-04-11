@@ -19,7 +19,7 @@ sudo docker run --rm -v ${PWD}:${PWD} -w ${PWD} -u $UID:$GID gcn-gpu2 make
 
 
 // Gem5 command to run the litmus test
-sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_check_protocol_MP1_Hetero_relax_4096runs_SWMR_Voilation gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/MP/bin/MP_Ver1_Relax_SWMR_voilation -o 4
+sudo docker run -u $UID:$GID --volume $(pwd):$(pwd) -w $(pwd) gcn-gpu2 gem5/build/GCN3_X86/gem5.opt --stats-file=stats_check_protocol_MP1_Hetero_relax_4096runs_SWMR_Voilation gem5/configs/example/apu_se.py --cpu-type=DerivO3CPU -n 16 -c gem5-resources/gpu/Heterogenous_Litmus_Test/MP/MP1-sys/bin/MP_Ver1_Relax_SWMR_voilation -o 4
 
 
 
