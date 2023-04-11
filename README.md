@@ -1,16 +1,11 @@
-# ArtifactEvaluation
+# PLDI'23 Compound Memory GEM-5 Simulation Repository 
 
-Conatain the gem5 source code as well as step to build the gem5 and build neccessary libraries. Along with that, the repository contains CPU based litmus test, GPU based litmus test and CPU-GPU litmus test with ReadMe files.
+This repository conatain the gem5 source code and litmus test libraries for our Compound Memory Model paper. 
 
 
 # Setting up GEM-5
 
 The neccessary ubuntu version to run the gem-5 is >= 20.04.
-
-
-Untar the gem5_artifact and rename the folder to gem5
-
-Install all the neccessary libraries for the gem-5. 
 
 To create docker (from util/dockerfiles/gcn-gpu inside the gem5 folder) run the following command: sudo docker build -t gcn-gpu2 .
 
@@ -57,9 +52,10 @@ These also recompile gem5 with the respective code and execute the tests.
 ./runall_CTA_scope.sh
 ```
 
-# Cleaning
+## Cleaning
 
 There is another script file (cleanall.sh) that cleans up everything.
 
+## Run Individual Litmus test
 
-
+With each litmus test, there is an ReadMe file that contain the neccessary intructions to build and execute that litmus test. The ReadMe file further reports the outcome as well that we observe in our simulation setup.
