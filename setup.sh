@@ -9,8 +9,11 @@ echo "========================================================="
 echo "Building Gem-5 with Original Files"
 echo "========================================================="
 sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu2 scons -sQ -j4 build/GCN3_X86/gem5.opt
-
-
+cd gem5
+tar -xvzf src_CTA_GPU.tar.gz
+tar -xvzf src_CTA_Hetero.tar.gz
+tar -xvzf src_SWMR_voilation.tar.gz
+cd ../
 
 
 
