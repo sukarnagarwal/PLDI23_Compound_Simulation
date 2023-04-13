@@ -7,7 +7,7 @@ This repository conatain the gem5 source code and litmus test libraries for our 
 
 The neccessary ubuntu version to run the gem-5 is >= 20.04.
 
-To create docker (from util/dockerfiles/gcn-gpu inside the gem5 folder) run the following command: sudo docker build -t gcn-gpu2 .
+To create docker (from gem5/util/dockerfiles/gcn-gpu inside the gem5 folder) run the following command: sudo docker build -t gcn-gpu2 .
 
 To build gem-5 (from the home folder) use the following command:
 sudo docker run --rm -v $PWD/gem5:/gem5 -w /gem5 gcn-gpu2 scons -sQ -j4 build/GCN3_X86/gem5.opt
@@ -19,7 +19,7 @@ You can use the `setup.sh` script to (re-)build it.
 
 # Running
 
-This artifact has a series of litmus tests, some of which require us to recompile gem5.  You can run everything by calling:
+This artifact has a series of litmus tests, some of which require us to recompile gem5. Make sure you untar all the src files (src_CTA_GPU.tar.gz, src_CTA_Hetero.tar.gz and src_SWMR_voilation.tar.gz) in the gem5 directory before start execution.  You can run everything by calling:
 
 ```
 ./run-all-litmus.sh
