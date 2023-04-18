@@ -58,4 +58,4 @@ There is another script file (cleanall.sh) that cleans up everything.
 
 ## Run Individual Litmus test
 
-With each litmus test, there is an ReadMe file that contain the neccessary intructions to build and execute that litmus test. The ReadMe file further reports the outcome as well that we observe in our simulation setup.
+With each litmus test, there is an ReadMe file that contain the intructions to build and execute that litmus test. The ReadMe file further reports the outcome that we observe in our simulation setup.
