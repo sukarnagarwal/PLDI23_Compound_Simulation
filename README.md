@@ -5,7 +5,7 @@ This repository conatain the gem5 source code and litmus test libraries for our 
 If you use Compound Memory Model Litimus test framework in your research, we would appreciate a citation to: 
 
 
-Goens, A., Chakraborty, S., Sarkar, S., Agarwal, S., Oswald, N., & Nagarajan, V. Compound Memory Models. In Proceedings of 44th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2023), June 2023.
+Goens, A., Chakraborty, S., Sarkar, S., Agarwal, S., Oswald, N., & Nagarajan, V. Compound Memory Models. In Proceedings of 44th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2023), June 2023. [PDF](https://homepages.inf.ed.ac.uk/vnagaraj/papers/pldi23.pdf)
 
 
 # Setting up GEM-5
