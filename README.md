@@ -2,6 +2,11 @@
 
 This repository conatain the gem5 source code and litmus test libraries for our Compound Memory Model paper. 
 
+If you use Compound Memory Model Litimus test framework in your research, we would appreciate a citation to: 
+
+
+Goens, A., Chakraborty, S., Sarkar, S., Agarwal, S., Oswald, N., & Nagarajan, V. Compound Memory Models. In Proceedings of 44th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2023), June 2023. [embed]https://homepages.inf.ed.ac.uk/vnagaraj/papers/pldi23.pdf[/embed] 
+
 
 # Setting up GEM-5
 
@@ -59,3 +64,6 @@ There is another script file (cleanall.sh) that cleans up everything.
 ## Run Individual Litmus test
 
 With each litmus test, there is an ReadMe file that contain the intructions to build and execute that litmus test. The ReadMe file further reports the outcome that we observe in our simulation setup.
+
+
+
